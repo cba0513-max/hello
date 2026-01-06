@@ -1,5 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>隔日沖雷達</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    .wrap {
+      padding: 20px;
+      max-width: 720px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+    .sub {
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+    .card {
+      background: #020617;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    }
+    .tag {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #1e293b;
+      margin-right: 6px;
+      color: #38bdf8;
+    }
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      margin-top: 20px;
+      padding: 14px;
+      border-radius: 12px;
+      border: none;
+      background: #22c55e;
+      color: #022c22;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>📡 隔日沖雷達</h1>
+    <div class="sub">只看「隔日有機會續強」的短線股</div>
 
+    <div class="card">
+      <span class="tag">量增</span>
+      <span class="tag">強勢整理</span>
+      <span class="tag">題材</span>
+      <h2>2330 台積電</h2>
+      <div class="price">參考價：$XXX</div>
+      <div class="sub">條件：量能回溫、5 日線不破</div>
+    </div>
 
+    <div class="card">
+      <span class="tag">爆量</span>
+      <span class="tag">前高</span>
+      <h2>2454 聯發科</h2>
+      <div class="price">參考價：$XXX</div>
+      <div class="sub">條件：回測不破、隔日沖熱門</div>
+    </div>
 
-  
-
+    <button class="btn">🔄 明日重新掃描</button>
+  </div>
+</body>
+</html>
