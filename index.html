@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>手機版型範例</title>
+
+  <style>/* ===== D方案：手機更好看（iPhone 15 Pro Max 友善） ===== */
+:root{
+  --radius: 18px;
+}
+
+.wrap{
+  padding: 22px 16px 64px;
+}
+
+/* 文字更好讀 */
+.hero h1{
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: .2px;
+}
+.sub{
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* 按鈕更像 iOS */
+.btn{
+  font-size: 16px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  min-height: 44px;          /* iOS 觸控建議尺寸 */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 卡片更有層次 */
+.card{
+  border-radius: var(--radius);
+}
+
+/* iPhone 15 Pro Max（430px）再放鬆一點 */
+@media (min-width: 430px){/* iPhone 15 Pro Max（430px 以上） */
+@media (min-width: 430px) {
+  body {
+    font-size: 18px;
+  }
+
+  .wrap {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 14px 18px;
+  }
+}
+
+  .wrap{ padding-left: 20px; padding-right: 20px; }
+  .hero h1{ font-size: 32px; }
+}
+
+    /* 讓排版在手機上自然好看 */
+    :root{
+      --bg:#0b1220;
+      --card:#111a2e;
+      --text:#eaf0ff;
+      --muted:rgba(234,240,255,.7);
+      --line:rgba(234,240,255,.12);
+      --radius:16px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC",Arial,sans-serif;
+      background: radial-gradient(1200px 700px at 20% 10%, #1a2a5a 0%, var(--bg) 55%);
+      color:var(--text);
+    }
+    a{ color:inherit; text-decoration:none; }
+
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 20px 16px 56px;
+    }
+
+    /* 上方導覽 */
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding: 14px 14px;
+      border:1px solid var(--line);
+      background: rgba(17,26,46,.7);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .logo{
+      width:34px;height:34px;
+      border-radius:12px;
+      background: linear-gradient(135deg, #6ae4ff, #7c5cff);
+      display:inline-block;
+    }
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .btn{
+      padding:10px 12px;
+      border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    .btn.primary{
+      border:0;
+      background: linear-gradient(135deg, #6ae4ff, #7c5cff);
+      color:#0b1220;
+    }
+
+    /* 首屏 */
+    .hero{
+      margin-top: 18px;
+      padding: 22px 18px;
+      border:1px solid var(--line);
+      background: rgba(17,26,46,.55);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius);
+      display:grid;
+      gap:14px;
+    }
+    .kicker{ color: var(--muted); font-size: 13px; }
+    h1{
+      margin:0;
+      font-size: 26px;
+      line-height: 1.2;
+      letter-spacing: .2px;
+    }
+    .sub{
+      margin:0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .hero-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+    }
+
+    /* 卡片區 */
+    .grid{
+      margin-top: 16px;
+      display:grid;
+      gap:12px;
+    }
+    .card{
+      padding: 16px 14px;
+      border:1px solid var(--line);
+      background: rgba(17,26,46,.45);
+      border-radius: var(--radius);
+    }
+    .card h2{
+      margin:0 0 6px;
+      font-size: 16px;
+    }
+    .card p{
+      margin:0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* 手機 → 平板/桌機自動變兩欄、三欄 */
+    @media (min-width: 720px){
+      h1{ font-size: 34px; }
+      .hero{ padding: 28px 22px; }
+      .grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 980px){
+      .grid{ grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* 底部 */
+    .footer{
+      margin-top: 18px;
+      color: rgba(234,240,255,.55);
+      font-size: 12px;
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <span class="logo"></span>
+        <span>我的手機版網站</span>
+      </div>
+      <div class="nav-right">
+        <button class="btn" onclick="alert('這個按鈕之後可以做功能！')">聯絡</button>
+        <button class="btn primary" onclick="alert('已完成手機版型 ✅')">開始</button>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="kicker">手機優先 · RWD 自動適配</div>
+      <h1>你好！這是一個「手機也好看」的版型</h1>
+      <p class="sub">
+        這個版型在手機上是單欄、字體清楚、按鈕好點；到平板/電腦會自動變兩欄/三欄。
+        你接下來只要改文字、換顏色、加圖片，就能變成你的專屬網站。
+      </p>
+      <div class="hero-actions">
+        <button class="btn primary" onclick="alert('下一步：我可以幫你做首頁 + 產品卡片 + 聯絡表單')">看示範</button>
+        <button class="btn" onclick="window.scrollTo({top: document.body.scrollHeight, behavior:'smooth'})">往下看</button>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>✅ 手機好讀</h2>
+        <p>字體大小、留白、按鈕大小都為手機設計，點起來不會很難按。</p>
+      </div>
+      </section>
+</div>
+</body>
+</html>
